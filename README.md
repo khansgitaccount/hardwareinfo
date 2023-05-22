@@ -5,7 +5,7 @@ The Hardware Information App is an Android application that provides detailed in
 
 ## Features
 
-The Device Information App includes the following features:
+The Hardware Information App App includes the following features:
 
 - Manufacturer: Displays the manufacturer of the device (e.g., Samsung, Oppo).
 - Model Name and Model Number: Shows the name and number of the device model.
