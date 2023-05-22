@@ -24,8 +24,8 @@ The Hardware Information App App includes the following features:
 
 To build and run the application, you need to have the following software installed:
 
-- Android Studio (version X.X.X or higher)
-- Android SDK (minimum API level XX)
+- Android Studio (Android Studio Flamingo | 2022.2.1 or higher)
+- Android SDK (minimum API level 24)
 
 ## Installation
 
