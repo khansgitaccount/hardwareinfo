@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cpuGpuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/switch_track_off"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_card_background"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/cpuGpuLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/string_cpu_gpu_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/processorInfoLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_processor_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cpuGpuLabel" />
+
+                <TextView
+                    android:id="@+id/processorInfoValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/processorInfoLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/processorInfoLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/processorInfoLabelTextView" />
+
+                <TextView
+                    android:id="@+id/cpuCoresLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_cpu_cores_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/processorInfoValueTextView" />
+
+                <TextView
+                    android:id="@+id/cpuCoresValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/cpuCoresLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/cpuCoresLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/cpuCoresLabelTextView" />
+
+                <TextView
+                    android:id="@+id/bit64SupportLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_64_bit_support_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cpuCoresLabelTextView" />
+
+                <TextView
+                    android:id="@+id/bit64SupportValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/bit64SupportLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/bit64SupportLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/bit64SupportLabelTextView" />
+
+                <TextView
+                    android:id="@+id/gpuRendererLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_gpu_renderer_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bit64SupportLabelTextView" />
+
+                <TextView
+                    android:id="@+id/gpuRendererValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/gpuRendererLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/gpuRendererLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/gpuRendererLabelTextView" />
+
+                <TextView
+                    android:id="@+id/gpuVendorLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_gpu_vendor_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gpuRendererLabelTextView" />
+
+                <TextView
+                    android:id="@+id/gpuVendorValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/gpuVendorLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/gpuVendorLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/gpuVendorLabelTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cameraLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/switch_track_off"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cpuGpuLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_card_background"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/cameraLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/string_camera_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cameraMegaPixelLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_camera_megapixel_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cameraLabel" />
+
+                <TextView
+                    android:id="@+id/cameraMegaPixelValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/cameraMegaPixelLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/cameraMegaPixelLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/cameraMegaPixelLabelTextView" />
+
+                <TextView
+                    android:id="@+id/cameraApertureLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_camera_aperture_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cameraMegaPixelLabelTextView" />
+
+                <TextView
+                    android:id="@+id/cameraApertureValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/cameraApertureLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/cameraApertureLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/cameraApertureLabelTextView" />
+
+                <TextView
+                    android:id="@+id/flashLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/string_flash_available_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cameraApertureLabelTextView" />
+
+                <TextView
+                    android:id="@+id/flashValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_loading_placeholder"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="italic"
+                    app:layout_constraintBaseline_toBaselineOf="@id/flashLabelTextView"
+                    app:layout_constraintStart_toEndOf="@id/flashLabelTextView"
+                    app:layout_constraintTop_toTopOf="@id/flashLabelTextView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+

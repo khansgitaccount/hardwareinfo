@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <gradient-->
+<!--        android:type="linear"-->
+<!--        android:startColor="#B9D6E2"-->
+<!--        android:centerColor="#FFFFFF"-->
+<!--        android:endColor="#A6A6A6"-->
+<!--        android:angle="45" />-->
+<!--    <corners android:radius="8dp" />-->
+<!--</shape>-->
+
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <gradient-->
+<!--        android:type="linear"-->
+<!--        android:startColor="#B2DFDB"-->
+<!--        android:centerColor="#C1E7E3"-->
+<!--        android:endColor="#F0F0F0"-->
+<!--        android:angle="45" />-->
+<!--    <corners android:radius="8dp" />-->
+<!--</shape>-->
+
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <gradient-->
+<!--        android:type="linear"-->
+<!--        android:startColor="#B3C6DB"-->
+<!--        android:centerColor="#C0D2E1"-->
+<!--        android:endColor="#F0F0F0"-->
+<!--        android:angle="45" />-->
+<!--    <corners android:radius="8dp" />-->
+<!--</shape>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:startX="0"
+        android:startY="0"
+        android:endX="100"
+        android:endY="100"
+        android:gradientRadius="0"
+        android:angle="45"
+        android:centerColor="#D8D8D8"
+        android:startColor="#F0F0F0"
+        android:endColor="#404040" />
+    <corners android:radius="8dp" />
+</shape>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

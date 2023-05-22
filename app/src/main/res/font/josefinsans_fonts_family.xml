@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        android:font="@font/josefinsans_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/josefinsans_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700" />
+
+    <font
+        android:font="@font/josefinsans_bolditalic"
+        android:fontStyle="italic"
+        android:fontWeight="700"
+        app:font="@font/josefinsans_bolditalic"
+        app:fontStyle="italic"
+        app:fontWeight="700" />
+
+    <font
+        android:font="@font/josefinsans_italic"
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        app:font="@font/josefinsans_italic"
+        app:fontStyle="italic"
+        app:fontWeight="400" />
+
+    <font
+        android:font="@font/josefinsans_light"
+        android:fontStyle="normal"
+        android:fontWeight="300"
+        app:font="@font/josefinsans_light"
+        app:fontStyle="normal"
+        app:fontWeight="300" />
+
+    <font
+        android:font="@font/josefinsans_lightitalic"
+        android:fontStyle="italic"
+        android:fontWeight="300"
+        app:font="@font/josefinsans_lightitalic"
+        app:fontStyle="italic"
+        app:fontWeight="300" />
+
+    <font
+        android:font="@font/josefinsans_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/josefinsans_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+
+    <font
+        android:font="@font/josefinsans_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        app:font="@font/josefinsans_semibold"
+        app:fontStyle="normal"
+        app:fontWeight="600" />
+
+    <font
+        android:font="@font/josefinsans_semibolditalic"
+        android:fontStyle="italic"
+        android:fontWeight="600"
+        app:font="@font/josefinsans_semibolditalic"
+        app:fontStyle="italic"
+        app:fontWeight="600" />
+
+    <font
+        android:font="@font/josefinsans_thin"
+        android:fontStyle="normal"
+        android:fontWeight="100"
+        app:font="@font/josefinsans_thin"
+        app:fontStyle="normal"
+        app:fontWeight="100" />
+
+    <font
+        android:font="@font/josefinsans_thinitalic"
+        android:fontStyle="italic"
+        android:fontWeight="100"
+        app:font="@font/josefinsans_thinitalic"
+        app:fontStyle="italic"
+        app:fontWeight="100" />
+
+</font-family>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/switch_track_off"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/manufacturerLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_manufacturer_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/manufacturerValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/manufacturerLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/manufacturerLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/manufacturerLabelTextView" />
+
+            <TextView
+                android:id="@+id/modelNameLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_model_name_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/manufacturerLabelTextView" />
+
+            <TextView
+                android:id="@+id/modelNameValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/modelNameLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/modelNameLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/modelNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/modelNumberLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_model_number_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/modelNameLabelTextView" />
+
+            <TextView
+                android:id="@+id/modelNumberValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/modelNumberLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/modelNumberLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/modelNumberLabelTextView" />
+
+            <TextView
+                android:id="@+id/totalRamLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_total_ram_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/modelNumberLabelTextView" />
+
+            <TextView
+                android:id="@+id/totalRamValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/totalRamLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/totalRamLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/totalRamLabelTextView" />
+
+            <TextView
+                android:id="@+id/availableRamLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_available_ram_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/totalRamLabelTextView" />
+
+            <TextView
+                android:id="@+id/availableRamValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/availableRamLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/availableRamLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/availableRamLabelTextView" />
+
+
+            <TextView
+                android:id="@+id/totalStorageLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_total_storage_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/availableRamLabelTextView" />
+
+            <TextView
+                android:id="@+id/totalStorageValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/totalStorageLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/totalStorageLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/totalStorageLabelTextView" />
+
+
+            <TextView
+                android:id="@+id/availableStorageLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_available_storage_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/totalStorageLabelTextView" />
+
+            <TextView
+                android:id="@+id/availableStorageValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/availableStorageLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/availableStorageLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/availableStorageLabelTextView" />
+
+            <TextView
+                android:id="@+id/androidVersionLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_android_version_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/availableStorageLabelTextView" />
+
+            <TextView
+                android:id="@+id/androidVersionValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/androidVersionLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/androidVersionLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/androidVersionLabelTextView" />
+
+            <TextView
+                android:id="@+id/imeiLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_imei_device_id_label"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/androidVersionLabelTextView" />
+
+            <TextView
+                android:id="@+id/imeiValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_loading_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintBaseline_toBaselineOf="@id/imeiLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/imeiLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/imeiLabelTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
+
+
+

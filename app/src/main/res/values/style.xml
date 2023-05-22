@@ -1,0 +1,10 @@
+<resources>
+    <style name="CustomSnackbar" parent="Widget.Design.Snackbar">
+        <item name="android:background">@color/snackbar_background</item>
+        <item name="android:textColor">@color/snackbar_text_color</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_card_background"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/batteryLevelLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Level: "
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/batteryLevelValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textStyle="italic"
+                android:textColor="@color/text_primary"
+                app:layout_constraintBaseline_toBaselineOf="@id/batteryLevelLabelTextView"
+                app:layout_constraintStart_toEndOf="@id/batteryLevelLabelTextView"
+                app:layout_constraintTop_toTopOf="@id/batteryLevelLabelTextView" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/batteryLevelIndicator"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:indicatorColor="@color/color_success"
+                app:trackColor="@color/text_secondary"
+                android:textColor="@color/text_primary"
+                app:indicatorSize="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/batteryLevelValueTextView"
+                />
+
+            <TextView
+                android:id="@+id/batteryHealthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Health: "
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/batteryLevelIndicator" />
+
+            <TextView
+                android:id="@+id/batteryHealthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textStyle="italic"
+                android:textColor="@color/text_primary"
+                app:layout_constraintBaseline_toBaselineOf="@id/batteryHealthLabel"
+                app:layout_constraintStart_toEndOf="@id/batteryHealthLabel"
+                app:layout_constraintTop_toTopOf="@id/batteryHealthLabel" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/batteryHealthIndicator"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:indicatorColor="@color/color_success"
+                app:trackColor="@color/text_secondary"
+                app:indicatorSize="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/batteryHealthValue" />
+
+            <TextView
+                android:id="@+id/batteryStatusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Status: "
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/batteryHealthIndicator" />
+
+            <TextView
+                android:id="@+id/batteryStatusValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textStyle="italic"
+                android:textColor="@color/text_primary"
+                app:layout_constraintBaseline_toBaselineOf="@id/batteryStatusLabel"
+                app:layout_constraintStart_toEndOf="@id/batteryStatusLabel"
+                app:layout_constraintTop_toTopOf="@id/batteryStatusLabel" />
+
+            <TextView
+                android:id="@+id/batteryTechnologyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Technology: "
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/batteryStatusValue" />
+
+            <TextView
+                android:id="@+id/batteryTechnologyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textStyle="italic"
+                android:textColor="@color/text_primary"
+                app:layout_constraintBaseline_toBaselineOf="@id/batteryTechnologyLabel"
+                app:layout_constraintStart_toEndOf="@id/batteryTechnologyLabel"
+                app:layout_constraintTop_toTopOf="@id/batteryTechnologyLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</ScrollView>
+
+
+
+
+
+
