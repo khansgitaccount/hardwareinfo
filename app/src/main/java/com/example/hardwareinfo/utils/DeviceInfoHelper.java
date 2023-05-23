@@ -19,13 +19,11 @@ import android.telephony.TelephonyManager;
 import android.text.format.Formatter;
 import android.util.Log;
 import android.util.Size;
-import android.util.SizeF;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Locale;
 
 public class DeviceInfoHelper {
     private Context context;
@@ -268,7 +266,6 @@ public class DeviceInfoHelper {
         int scale = batteryStatus != null ? batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1) : -1;
         return (int) ((level / (float) scale) * 100);
     }
-
 }
 
 

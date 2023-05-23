@@ -4,9 +4,8 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ConfigurationInfo;
 import android.os.Build;
-import android.opengl.GLES20;
-import android.util.Log;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.regex.Matcher;
@@ -49,7 +48,46 @@ public class CPUInfoHelper {
         return readSystemFileAsInt("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq");
     }
 
+//    public boolean is64Bit() {
+//        return Build.SUPPORTED_64_BIT_ABIS.length > 0;
+//    }
+
     public boolean is64Bit() {
+        // Check if the device is running on a 64-bit OS
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            String[] supportedABIs64 = Build.SUPPORTED_ABIS;
+            for (String abi : supportedABIs64) {
+                if (abi.contains("64")) {
+                    return true;
+                }
+            }
+        }
+
+        // Check if the device supports 64-bit through system properties
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            String is64BitProperty = System.getProperty("ro.product.cpu.abilist64");
+            if (is64BitProperty != null && !is64BitProperty.isEmpty()) {
+                return true;
+            }
+        }
+
+        // Check if the device has a 64-bit processor through the presence of the libc library
+        String[] supportedABIs = Build.SUPPORTED_ABIS;
+        for (String abi : supportedABIs) {
+            if (abi.equals("arm64-v8a") || abi.equals("x86_64") || abi.equals("mips64")) {
+                try {
+                    String libPath = "/system/lib64/libc.so";
+                    File libcFile = new File(libPath);
+                    if (libcFile.exists()) {
+                        return true;
+                    }
+                } catch (Exception e) {
+                    // Handle exception if necessary
+                }
+            }
+        }
+
+        // Fallback to a basic check if none of the above methods provide a definitive result
         return Build.SUPPORTED_64_BIT_ABIS.length > 0;
     }
 
