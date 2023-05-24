@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.hardwareinfo.R;
 import com.example.hardwareinfo.utils.CPUInfoHelper;
+import com.example.hardwareinfo.utils.CameraUtils;
 import com.example.hardwareinfo.utils.DeviceInfoHelper;
 import com.example.hardwareinfo.utils.GPUInfoHelper;
 import com.example.hardwareinfo.utils.PermissionManager;
@@ -32,6 +33,9 @@ public class CpuGpuFragment extends Fragment implements PermissionManager.OnPerm
     private GPUInfoHelper gpuInfoHelper;
     private CPUInfoHelper cpuInfoHelper;
     private PermissionManager permissionManager;
+
+    CameraUtils cameraUtils;
+
     public CpuGpuFragment() {
         // Required empty public constructor
     }
@@ -47,6 +51,7 @@ public class CpuGpuFragment extends Fragment implements PermissionManager.OnPerm
         cpuInfoHelper = new CPUInfoHelper(getActivity());
         gpuInfoHelper = new GPUInfoHelper(getActivity());
         gpuInfoHelper.retrieveGPUCapabilities();
+        cameraUtils = new CameraUtils();
         return inflater.inflate(R.layout.fragment_cpu_gpu, container, false);
     }
 
@@ -78,12 +83,13 @@ public class CpuGpuFragment extends Fragment implements PermissionManager.OnPerm
         processorNameTextView.setText(deviceInfoHelper.getProcessorInfo());
         gpuRendererTextView.setText(gpuInfoHelper.getGPURenderer());
         gpuVendorTextView.setText(gpuInfoHelper.getGPUVendor());
-        cameraMegaPixelTextView.setText(deviceInfoHelper.getRearCameraMegapixels());
+//        cameraMegaPixelTextView.setText(deviceInfoHelper.getRearCameraMegapixels());
+        cameraMegaPixelTextView.setText(cameraUtils.getPrimaryCameraMegaPixels(requireActivity()) + "MP");
         cameraApertureTextView.setText(Objects.equals(deviceInfoHelper.getCameraApertures(), "N/A") ? deviceInfoHelper.getCameraApertures() : "f/" + deviceInfoHelper.getCameraApertures());
         flashTextView.setText(deviceInfoHelper.isFlashAvailable());
 
         cpuCoresValueTextView.setText(cpuInfoHelper.getNumberOfCores());
-        support64BitValueTextView.setText(cpuInfoHelper.is64Bit()? "Yes" : "No");
+        support64BitValueTextView.setText(cpuInfoHelper.is64Bit() ? "Yes" : "No");
 
     }
 

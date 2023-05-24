@@ -25,9 +25,9 @@ public class SplashActivity extends AppCompatActivity {
 
         // Set gradient colors
         splashTitle.setGradientColors(
-                ContextCompat.getColor(this,R.color.gold_start),
-                ContextCompat.getColor(this,R.color.gold_end),
-                ContextCompat.getColor(this,R.color.gold_start)
+                ContextCompat.getColor(this, R.color.gold_start),
+                ContextCompat.getColor(this, R.color.gold_end),
+                ContextCompat.getColor(this, R.color.gold_start)
         );
 
         // Set shadow
@@ -45,6 +45,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
+
                 splashTitle.stopAnimation();
                 // Start the main activity
                 Intent intent = new Intent(SplashActivity.this, DeviceInfoManager.class);
@@ -58,12 +59,15 @@ public class SplashActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         cleanup();
+        splashTitle = null;
     }
 
     private void cleanup() {
-        splashTitle.cleanup();
-        splashTitle.stopAnimation();
-        splashTitle = null;
+        if (splashTitle != null) {
+            splashTitle.cleanup();
+            splashTitle.stopAnimation();
+        }
+
     }
 }
 

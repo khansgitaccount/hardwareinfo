@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ConfigurationInfo;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
@@ -24,6 +25,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class DeviceInfoHelper {
     private Context context;
@@ -265,6 +269,34 @@ public class DeviceInfoHelper {
         int level = batteryStatus != null ? batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) : -1;
         int scale = batteryStatus != null ? batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1) : -1;
         return (int) ((level / (float) scale) * 100);
+    }
+
+    public void getBackCameraResolutionInMp()
+    {
+        Camera camera=Camera.open(0);    // For Back Camera
+        android.hardware.Camera.Parameters params = camera.getParameters();
+        List sizes = params.getSupportedPictureSizes();
+        Camera.Size  result = null;
+
+        ArrayList<Integer> arrayListForWidth = new ArrayList<Integer>();
+        ArrayList<Integer> arrayListForHeight = new ArrayList<Integer>();
+
+        for (int i=0;i<sizes.size();i++){
+            result = (Camera.Size) sizes.get(i);
+            arrayListForWidth.add(result.width);
+            arrayListForHeight.add(result.height);
+            Log.d("PictureSize", "Supported Size: " + result.width + "height : " + result.height);
+            System.out.println("BACK PictureSize Supported Size: " + result.width + "height : " + result.height);
+        }
+        if(arrayListForWidth.size() != 0 && arrayListForHeight.size() != 0){
+            System.out.println("Back max W :"+ Collections.max(arrayListForWidth));              // Gives Maximum Width
+            System.out.println("Back max H :"+Collections.max(arrayListForHeight));                 // Gives Maximum Height
+            System.out.println("Back Megapixel :"+( ((Collections.max(arrayListForWidth)) * (Collections.max(arrayListForHeight))) / 1024000 ) );
+        }
+        camera.release();
+
+        arrayListForWidth.clear();
+        arrayListForHeight.clear();
     }
 }
 

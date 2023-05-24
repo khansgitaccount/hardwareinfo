@@ -5,8 +5,6 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -20,14 +18,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.hardwareinfo.R;
 import com.example.hardwareinfo.fragments.LocationFragment;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 
 public class LocationHelper implements ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int PERMISSION_REQUEST_CODE = 1;
@@ -87,19 +79,20 @@ public class LocationHelper implements ActivityCompat.OnRequestPermissionsResult
             @Override
             public void run() {
                 if (currentLocation != null) {
-                    Snackbar.make(locationFragment.requireView(), "Location not null ", Snackbar.LENGTH_SHORT).show();
+//                    Snackbar.make(locationFragment.requireView(), "Location retrieved.", Snackbar.LENGTH_SHORT).show();
 
                     // Location is fetched, update the UI
                     locationListener.onLocationChanged(currentLocation);
                 } else {
                     // Location fetching took too long or encountered an error
-                    Snackbar.make(locationFragment.requireView(), "Location fetching took too long or encountered an error", Snackbar.LENGTH_SHORT).show();
+                    if (locationFragment != null && locationFragment.getView() != null) {
+                        Snackbar.make(locationFragment.requireView(), "Location fetching took too long or encountered an error", Snackbar.LENGTH_SHORT).show();
+                    }
                 }
                 dialog.dismiss();
             }
         }, LOCATION_FETCH_TIMEOUT);
     }
-
 
 
     public void removeLocationUpdates() {
