@@ -15,7 +15,7 @@ The Hardware Information App App includes the following features:
 - Android Version: Shows the version of the Android operating system running on the device.
 - Camera Megapixels: Displays the megapixel count of the device's primary camera.
 - Camera Aperture: Shows the aperture value of the device's primary camera.
-- Processor (CPU) Information: Displays information about the device's processor, such as its model and clock speed.
+- Processor (CPU) Information: Displays information about the device's processor, such as its model and cores, etc.
 - GPU Information: Shows information about the device's graphics processing unit.
 - Live Sensor Readings: Displays real-time readings from various sensors, including GPS, gyroscope, accelerometer, rotation vector, proximity sensor, and ambient light sensor.
 - IMEI: Shows the International Mobile Equipment Identity (IMEI) number of the device.
